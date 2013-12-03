@@ -1,0 +1,12 @@
+CRYPTSY API specification
+================================
+
+https://www.cryptsy.com/pages/api
+
+
+Orderbook
+================================
+General Orderbook Data (Single Market): 
+
+http://pubapi.cryptsy.com/api.php?method=singleorderdata&marketid={MARKET ID}
+

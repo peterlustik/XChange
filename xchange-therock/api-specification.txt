@@ -1,0 +1,37 @@
+The Rock Trading Ltd. API specification
+================================
+
+https://www.therocktrading.com/en/pages/api
+
+
+Ticker
+================================
+The API call to obtain market ticket can be made at:
+
+GET https://www.therocktrading.com/api/ticker/#{fund_name}
+
+Params:
+fund_name - the string representation of the fund (e.g.: BTCEUR, BTCUSD, etc)
+
+Returns:
+errorCode - "OK" on success, "ERROR" on failure
+symbol - string representation of the specified fund
+bid - best bid value of fund_name
+ask - best ask value of fund_name
+
+
+
+
+Orderbook
+================================
+Full market orderbook for each fund, stock or currency is available through the orderbook API call. The API call can be made at:
+
+GET https://www.therocktrading.com/api/orderbook/#{fund_name}
+
+Params:
+fund_name - the string representation of the fund (e.g.: BTCEUR, BTCUSD, etc)
+
+Returns:
+errorCode - "OK" on success, "ERROR" on failure
+asks - array whose first member is the actual price and the second is the available quantity at that price
+bids - array which first member is the actual price and the second is the available quantity at that price
